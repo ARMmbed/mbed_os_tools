@@ -80,7 +80,7 @@ class ConnPrimitiveRemoteTestCase(unittest.TestCase):
     def test_constructor(self):
         self.importer.assert_called_once_with("RemoteModuleMock")
 
-        self.remote.client.get_resources.called_once()
+        self.remote.client.get_resources.assert_called_once()
         self.assertEqual(self.remote.remote_module, RemoteModuleMock)
         self.assertIsInstance(self.remote.client, RemoteModuleMock)
         self.assertIsInstance(self.remote.selected_resource, RemoteResourceMock)
@@ -93,10 +93,10 @@ class ConnPrimitiveRemoteTestCase(unittest.TestCase):
             'tags': {"a": True, "b": True}})
 
         # flash is called
-        self.remote.selected_resource.open_connection.called_once_with("test.bin")
+        # self.remote.selected_resource.open_connection.called_once_with("test.bin")
 
         # open_connection is called
-        self.remote.selected_resource.open_connection.called_once()
+        self.remote.selected_resource.open_connection.assert_called_once()
         connect = self.remote.selected_resource.open_connection.call_args[1]
         self.assertEqual(connect["parameters"].baudrate, 9600)
 

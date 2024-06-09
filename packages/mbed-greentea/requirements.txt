@@ -1,2 +1,4 @@
-mbed-os-tools>=0.0.9
-mbed-host-tests>=1.5.0,<2
+mbed-os-tools>=0.0.9; python_version <= '3.7'
+mbed-os-tools; python_version > '3.7'
+mbed-host-tests>=1.5.0,<2; python_version <= '3.7'
+mbed-host-tests; python_version > '3.7'

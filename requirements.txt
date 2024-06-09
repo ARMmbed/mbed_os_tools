@@ -5,7 +5,7 @@ requests; python_version > '3.7'
 intelhex>=2.0,<3.0; python_version <= '3.7'
 intelhex; python_version > '3.7'
 future
-PrettyTable<=1.0.1; python_version < '3.6'
+PrettyTable<=1.0.1; python_version <= '3.6'
 prettytable>=2.0,<3.0; python_version == '3.7'
 prettytable; python_version > '3.7'
 fasteners
@@ -19,5 +19,9 @@ six; python_version > '3.7'
 colorama>=0.3,<0.5; python_version <= '3.7'
 colorama; python_version > '3.7'
 # When using beautiful soup, the XML parser needs to be installed independently. It is only needed on macOs though.
-beautifulsoup4
+beautifulsoup4<4.13.0; python_version <= '3.6' #__future__ added
+beautifulsoup4; python_version >= '3.7'
+soupsieve<2.4; python_version <= '3.7' #__future__ added
+soupsieve; python_version > '3.7'
 lxml; sys_platform == 'darwin'
+setuptools; python_version >= '3.12'

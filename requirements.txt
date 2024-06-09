@@ -1,15 +1,23 @@
-PySerial>=3.0,<4.0
-requests>=2.0,<3.0
-intelhex>=2.0,<3.0
+PySerial>=3.0,<4.0; python_version <= '3.7'
+PySerial; python_version > '3.7'
+requests>=2.0,<3.0; python_version <= '3.7'
+requests; python_version > '3.7'
+intelhex>=2.0,<3.0; python_version <= '3.7'
+intelhex; python_version > '3.7'
 future
 PrettyTable<=1.0.1; python_version < '3.6'
-prettytable>=2.0,<3.0; python_version >= '3.6'
+prettytable>=2.0,<3.0; python_version == '3.7'
+prettytable; python_version > '3.7'
 fasteners
-appdirs>=1.4,<2.0
-junit-xml>=1.0,<2.0
+appdirs>=1.4,<2.0; python_version <= '3.7'
+appdirs; python_version > '3.7'
+junit-xml>=1.0,<2.0; python_version <= '3.7'
+junit-xml; python_version > '3.7'
 lockfile
-six>=1.0,<2.0
-colorama>=0.3,<0.5
+six>=1.0,<2.0; python_version <= '3.7'
+six; python_version > '3.7'
+colorama>=0.3,<0.5; python_version <= '3.7'
+colorama; python_version > '3.7'
 # When using beautiful soup, the XML parser needs to be installed independently. It is only needed on macOs though.
 beautifulsoup4
 lxml; sys_platform == 'darwin'

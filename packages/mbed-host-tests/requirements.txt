@@ -1,1 +1,2 @@
-mbed-os-tools>=0.0.9
+mbed-os-tools>=0.0.9; python_version <= '3.7'
+mbed-os-tools; python_version > '3.7'

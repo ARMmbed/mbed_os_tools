@@ -22,7 +22,7 @@ import os
 import sys
 import random
 import optparse
-import imp
+import importlib
 import io
 from time import time
 try:
@@ -187,7 +187,7 @@ def main():
 
     # Show --fm option only if "fm_agent" module installed
     try:
-        imp.find_module('fm_agent')
+        importlib.util.find_spec('fm_agent')
     except ImportError:
         fm_help=optparse.SUPPRESS_HELP
     else:

@@ -1,3 +1,5 @@
 PrettyTable<=1.0.1; python_version < '3.6'
-prettytable>=2.0,<3.0; python_version >= '3.6'
-mbed-os-tools>=0.0.9
+prettytable>=2.0,<3.0; python_version == '3.7'
+prettytable; python_version > '3.7'
+mbed-os-tools>=0.0.9; python_version <= '3.7'
+mbed-os-tools; python_version > '3.7'

@@ -22,7 +22,7 @@ command line tool instead.
 
 """
 
-import imp
+import importlib
 import sys
 from optparse import OptionParser
 from optparse import SUPPRESS_HELP
@@ -245,7 +245,7 @@ def init_host_test_cli_params():
 
     # Show --fm option only if "fm_agent" module installed
     try:
-        imp.find_module("fm_agent")
+        importlib.util.find_spec("fm_agent")
     except ImportError:
         fm_help = SUPPRESS_HELP
     else:

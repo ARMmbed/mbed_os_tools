@@ -1,6 +1,12 @@
-coverage>=4,<5
-coveralls>=1,<2
-mock>=2,<4
-pytest>=3,<5
-wheel>=0.34
-setuptools-scm>=4.1
+coverage>=4,<5; python_version <= '3.7'
+coverage; python_version > '3.7'
+coveralls>=1,<2; python_version <= '3.7'
+coveralls; python_version > '3.7'
+mock>=2,<4; python_version <= '3.7'
+mock; python_version > '3.7'
+pytest>=3,<5; python_version <= '3.7'
+pytest; python_version > '3.7'
+wheel>=0.34; python_version <= '3.7'
+wheel; python_version > '3.7'
+setuptools-scm>=4.1; python_version <= '3.7'
+setuptools-scm; python_version > '3.7'

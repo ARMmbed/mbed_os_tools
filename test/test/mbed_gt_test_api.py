@@ -15,8 +15,10 @@
 
 import unittest
 from mbed_os_tools.test import mbed_test_api
-from mock import patch, MagicMock
-
+try:
+    from unittest.mock import patch, MagicMock
+except ImportError:
+    from mock import patch, MagicMock
 
 class GreenteaTestAPI(unittest.TestCase):
 

@@ -20,7 +20,10 @@ import tempfile
 import unittest
 
 from lockfile import LockFile
-from mock import patch
+try:
+    from unittest.mock import patch
+except ImportError:
+    from mock import patch
 from mbed_os_tools.test import mbed_greentea_dlm
 
 home_dir = tempfile.mkdtemp()

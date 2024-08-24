@@ -20,7 +20,10 @@ import unittest
 
 from six import StringIO
 
-from mock import patch
+try:
+    from unittest.mock import patch
+except ImportError:
+    from mock import patch
 from mbed_os_tools.test import mbed_target_info
 
 

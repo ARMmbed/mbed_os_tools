@@ -16,7 +16,10 @@ limitations under the License.
 """
 
 import os
-import mock
+try:
+   from unittest import mock
+except ImportError
+   import mock
 import six
 import sys
 import unittest

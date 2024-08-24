@@ -14,7 +14,10 @@
 # limitations under the License.
 
 import unittest
-import mock
+try:
+   from unittest import mock
+except ImportError
+   import mock
 
 from mbed_os_tools.test.host_tests_conn_proxy.conn_primitive_remote import RemoteConnectorPrimitive
 

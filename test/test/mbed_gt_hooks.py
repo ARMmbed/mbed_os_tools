@@ -17,7 +17,10 @@ import six
 import sys
 import unittest
 
-from mock import patch
+try:
+    from unittest.mock import patch
+except ImportError:
+    from mock import patch
 from mbed_os_tools.test.mbed_greentea_hooks import GreenteaCliTestHook
 from mbed_os_tools.test.mbed_greentea_hooks import LcovHook
 

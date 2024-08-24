@@ -20,7 +20,10 @@ import sys
 import tempfile
 import unittest
 
-from mock import patch
+try:
+    from unittest.mock import patch
+except ImportError:
+    from mock import patch
 from mbed_os_tools.test import mbed_report_api
 
 class GreenteaReportApiFunctionality(unittest.TestCase):
